@@ -1,0 +1,34 @@
+#tos {
+    background-color: rgba(50, 30, 10, 0.2);
+    margin: 3rem auto;
+    width: 80%;
+    padding: 2rem;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#tos h1 {
+    font-size: 2.8rem;
+    max-width: 100%;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #f7e4c7;
+}
+#tos h2{
+    font-size: 2rem;
+    color: #f7e4c7;
+    font-weight: bold;
+}
+
+#tos p {
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #f7e4c7;
+}
+
+#tos a{
+    text-decoration: none;
+}
