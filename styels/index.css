@@ -85,7 +85,6 @@ img:nth-child(3) {
 
 .img-text:last-child { /*fix this bullshit*/
     max-width: 500px;
-    max-height: 300px;
     bottom: 30rem;
     right: 15rem;
 }

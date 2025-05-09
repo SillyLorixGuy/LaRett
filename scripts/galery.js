@@ -1,4 +1,3 @@
-
 document.querySelectorAll('.gallery').forEach(gallery => {
     const images = JSON.parse(gallery.getAttribute('data-images'));
     let currentIndex = 0;
@@ -50,4 +49,16 @@ document.querySelectorAll('.gallery').forEach(gallery => {
     gallery.appendChild(thumbnailsContainer);
 
     setPreview();
+
+    document.addEventListener('keydown', (event) => {
+        if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') return;
+
+        if (event.key === 'ArrowRight') {
+            currentIndex = (currentIndex + 1) % images.length;
+            setPreview();
+        } else if (event.key === 'ArrowLeft') {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            setPreview();
+        }
+    });
 });

@@ -30,5 +30,6 @@
 }
 
 #tos a{
-    text-decoration: none;
+    text-decoration: underline;
+    color: #f7e4c7;
 }
