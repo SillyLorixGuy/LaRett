@@ -69,9 +69,11 @@ aside {
         align-items: center;
 
     }
-    #contact-section{
+
+    #contact-section {
         padding: 1.5rem;
     }
+
     #contact-section h1 {
         font-size: 2rem;
     }

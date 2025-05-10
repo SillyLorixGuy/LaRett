@@ -68,25 +68,25 @@ document.querySelectorAll('.gallery').forEach(gallery => {
     });
 
     // ✅ Fullscreen on click
-previewImage.addEventListener('click', () => {
-    if (document.fullscreenElement === previewWrapper || document.webkitFullscreenElement === previewWrapper) {
-        // Exit fullscreen
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-            document.webkitExitFullscreen(); // Safari
-        } else if (document.msExitFullscreen) {
-            document.msExitFullscreen(); // IE/Edge
+    previewImage.addEventListener('click', () => {
+        if (document.fullscreenElement === previewWrapper || document.webkitFullscreenElement === previewWrapper) {
+            // Exit fullscreen
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen(); // Safari
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen(); // IE/Edge
+            }
+        } else {
+            // Enter fullscreen
+            if (previewWrapper.requestFullscreen) {
+                previewWrapper.requestFullscreen();
+            } else if (previewWrapper.webkitRequestFullscreen) {
+                previewWrapper.webkitRequestFullscreen(); // Safari
+            } else if (previewWrapper.msRequestFullscreen) {
+                previewWrapper.msRequestFullscreen(); // IE/Edge
+            }
         }
-    } else {
-        // Enter fullscreen
-        if (previewWrapper.requestFullscreen) {
-            previewWrapper.requestFullscreen();
-        } else if (previewWrapper.webkitRequestFullscreen) {
-            previewWrapper.webkitRequestFullscreen(); // Safari
-        } else if (previewWrapper.msRequestFullscreen) {
-            previewWrapper.msRequestFullscreen(); // IE/Edge
-        }
-    }
-});
+    });
 });

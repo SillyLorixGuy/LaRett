@@ -15,7 +15,8 @@
     margin-bottom: 1rem;
     color: #f7e4c7;
 }
-#tos h2{
+
+#tos h2 {
     font-size: 2rem;
     color: #f7e4c7;
 }
@@ -26,25 +27,29 @@
     color: #f7e4c7;
 }
 
-#tos a{
+#tos a {
     text-decoration: underline;
     color: #f7e4c7;
 }
 
-@media (max-width: 1080px){
-    main{
+@media (max-width: 1080px) {
+    main {
         width: 90%;
     }
-    #tos h1{
+
+    #tos h1 {
         font-size: 2rem;
     }
-    #tos h2{
+
+    #tos h2 {
         font-size: 1.6rem;
     }
-    #tos p{
-    font-size: 1.1rem;
+
+    #tos p {
+        font-size: 1.1rem;
     }
-    #tos a{
-    font-size: 1.1rem;
+
+    #tos a {
+        font-size: 1.1rem;
     }
 }
