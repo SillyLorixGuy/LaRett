@@ -2,11 +2,12 @@ nav a:nth-child(1) {
     color: #f0e6d2;
     font-size: 2.4rem;
   }
+
 .gallery-box{
   width: 80%;
   max-width: 1000px;
   background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+  border-radius: 20px;;
 }
 .gallery {
   margin-bottom: 0px;
@@ -15,13 +16,27 @@ nav a:nth-child(1) {
 
 .preview-wrapper {
   position: relative;
-  width: 50rem;
-  height: 40rem;
-  margin: 0 auto 15px;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  aspect-ratio: 4/3;
   border-radius: 20px;
-  background-color: #ddd;
-  background-size: cover;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;    
   background-position: center;
+  background-repeat: no-repeat;
+  cursor: zoom-in;
+}
+
+:fullscreen .preview-image {
+  background-size: contain;
+  background-color: rgba(133, 133, 133, 0.1);
 }
 
 .arrow {
@@ -36,7 +51,7 @@ nav a:nth-child(1) {
   cursor: pointer;
   font-size: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  z-index: 5;
   transition: background-color 0.3s, transform 0.2s;
 }
 
@@ -66,10 +81,20 @@ nav a:nth-child(1) {
   height: 70px;
   background-size: cover;
   background-position: center;
-  border: 2px solid transparent;
+  border: 2px solid #7b674d;
   cursor: pointer;
+
 }
 
 .thumbnail.active {
-  border-color: #7b674d;
+  border-color: #d4b893;
+}
+
+@media (max-width: 1080px){
+  main{
+    width: 90%;
+  }
+  .gallery-box{
+  width: 100%;
+}
 }

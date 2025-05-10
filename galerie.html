@@ -5,23 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Keramický ateliér LaRett</title>
-  <link rel="stylesheet" href="https://api.ssps.cajthaml.eu/file/64d9f18f79dad891e8a07c73">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://api.ssps.cajthaml.eu/file/64d9f18f79dad891e8a07c73">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="styels/global.css">
   <link rel="stylesheet" href="styels/galerie.css">
 </head>
 <a href=""></a>
 <body>
-  <nav>
-    <a href="galerie.html">Galerie</a>
-    <a href="kurz.html">Kurzy</a>
-    <a href="index.html">LaRett</a>
-    <a href="contact.html">Kontakt</a>
-    <a href="index.html#about-section">O Mně</a>
-  </nav>
+   <div class="off-screen-menu">
+        <ul>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="kurz.html">Kurzy</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="index.html#about-section">O Mně</a></li>
+        </ul>
+    </div>
+    <nav>
+        <a href="galerie.html">Galerie</a>
+        <a href="kurz.html">Kurzy</a>
+        <a href="index.html">LaRett</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="index.html#about-section">O Mně</a>
+                <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
   <main>
     <div class="gallery-box">
       <div class="gallery" data-images='[
@@ -42,6 +56,7 @@
       ]'></div>
     </div>
   </main>
+
   <footer>
     <div class="footer-container">
       <div class="footer-left">
@@ -65,7 +80,7 @@
     </div>
   </footer>
 
-
+<script src="scripts/burber-menu.js"></script>
   <script src="scripts/galery.js"></script>
 </body>
 

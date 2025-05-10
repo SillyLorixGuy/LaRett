@@ -6,8 +6,12 @@ document.querySelectorAll('.gallery').forEach(gallery => {
     previewWrapper.className = 'preview-wrapper';
     gallery.appendChild(previewWrapper);
 
+    const previewImage = document.createElement('div');
+    previewImage.className = 'preview-image';
+    previewWrapper.appendChild(previewImage);
+
     const setPreview = () => {
-        previewWrapper.style.backgroundImage = `url(${images[currentIndex]})`;
+        previewImage.style.backgroundImage = `url(${images[currentIndex]})`;
         thumbnailsContainer.querySelectorAll('.thumbnail').forEach((thumb, i) => {
             thumb.classList.toggle('active', i === currentIndex);
         });
@@ -50,6 +54,7 @@ document.querySelectorAll('.gallery').forEach(gallery => {
 
     setPreview();
 
+    // ✅ Arrow key navigation
     document.addEventListener('keydown', (event) => {
         if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') return;
 
@@ -61,4 +66,27 @@ document.querySelectorAll('.gallery').forEach(gallery => {
             setPreview();
         }
     });
+
+    // ✅ Fullscreen on click
+previewImage.addEventListener('click', () => {
+    if (document.fullscreenElement === previewWrapper || document.webkitFullscreenElement === previewWrapper) {
+        // Exit fullscreen
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen(); // Safari
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen(); // IE/Edge
+        }
+    } else {
+        // Enter fullscreen
+        if (previewWrapper.requestFullscreen) {
+            previewWrapper.requestFullscreen();
+        } else if (previewWrapper.webkitRequestFullscreen) {
+            previewWrapper.webkitRequestFullscreen(); // Safari
+        } else if (previewWrapper.msRequestFullscreen) {
+            previewWrapper.msRequestFullscreen(); // IE/Edge
+        }
+    }
+});
 });

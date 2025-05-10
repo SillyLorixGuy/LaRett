@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://api.ssps.cajthaml.eu/file/64d9f18f79dad891e8a07c73">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="styels/global.css">
@@ -12,24 +16,44 @@
 </head>
 
 <body>
-  <nav>
-    <a href="galerie.html">Galerie</a>
-    <a href="kurz.html">Kurzy</a>
-    <a href="index.html">LaRett</a>
-    <a href="contact.html">Kontakt</a>
-    <a href="index.html#about-section">O Mně</a>
-  </nav>
+   <div class="off-screen-menu">
+        <ul>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="kurz.html">Kurzy</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="index.html#about-section">O Mně</a></li>
+        </ul>
+    </div>
+    <nav>
+        <a href="galerie.html">Galerie</a>
+        <a href="kurz.html">Kurzy</a>
+        <a href="index.html">LaRett</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="index.html#about-section">O Mně</a>
+                <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
   <main>
     <section>
-      <!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/tadeas-lauer/larett-2h-workshop?hide_gdpr_banner=1&text_color=101010&primary_color=5f4931" style="min-width:700px;height:1000px;"></div>
+      <h1>Ceník:</h1>
+      <p><br>Keramické dílny pro děti i dospělé:  2 h - 600 Kč/osobu <br><br>
+        Dárkové poukazy: 2h - 600 Kč <br><br>
+        Narozeninové tvoření pro oslavence a jeho přátele 4h pro 5 osob - 2000 Kč
+        <br><br>
+        Konzultace: 2h / 900 Kč<br><br>
+    </p>
+    </section>
+    <section>
+ <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/tadeas-lauer/keramicky-workshop-2h?background_color=ffffff&text_color=584f40&primary_color=7b674d"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- Calendly inline widget end -->
     </section>
-    <aside>
-
-    </aside>
   </main>
+
   <footer>
     <div class="footer-container">
       <div class="footer-left">
@@ -52,7 +76,7 @@
       </div>
     </div>
   </footer>
-
+<script src="scripts/burber-menu.js"></script>
 </body>
 
 </html>
