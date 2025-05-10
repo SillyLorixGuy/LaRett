@@ -134,6 +134,9 @@ img:nth-child(3) {
 /*/// /// /// /// /// /// /// ///*/
 
 @media (max-width: 1080px) {
+    main{
+        width: 100%;
+    }
     #hero-container {
         width: 80%;
         height: 700px;
@@ -204,8 +207,6 @@ img:nth-child(3) {
         height: auto;
         padding-bottom: 5%;
         width: 100%;
-
-
     }
 
     #hero-background-box {
